@@ -35,7 +35,10 @@ const Header = () => {
           </NavMenuItem>
         </NavMenuList>
       </NavMenuRoot>
-      <Logo>Distinctive</Logo>
+      <Logo>
+        <span className="mobile">d.</span>
+        <span className="desktop">distinctive.</span>
+      </Logo>
       <IconContainer>
         <IconWrapper>
           <MagnifyingGlassIcon />
@@ -51,15 +54,12 @@ const Header = () => {
   );
 };
 
-// Styled components
-
 const HeaderWrapper = styled.header`
-  background-color: #fff;
+  background-color: #e5e5e5;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  border-bottom: 1px solid #eaeaea;
   position: relative;
 
   /* Layout for desktop view */
@@ -72,32 +72,48 @@ const NavMenuRoot = styled(NavigationMenu.Root)`
   display: flex;
   align-items: center;
 
-  /* Mobile view: hidden unless open */
   @media (max-width: 768px) {
     display: ${({ open }) => (open ? "flex" : "none")};
     position: absolute;
     top: 60px;
     left: 0;
-    width: 100%;
-    background-color: #fff;
-    flex-direction: column;
+    width: 50%;
+    background-color: #e5e5e5;
+    // flex-direction: column;
+    justify-content: flex-start;
     gap: 1rem;
-    padding: 1rem;
+    // padding: 1rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   }
 `;
 
 const Logo = styled.div`
-  font-size: 1.5rem;
-  font-weight: bold;
+  font-size: 2rem;
+  font-weight: 900;
   text-align: center;
   flex: 1;
+  color: #cca43b;
 
-  /* Center logo on mobile */
+  .mobile {
+    display: none;
+  }
+
+  .desktop {
+    display: inline;
+  }
+
   @media (max-width: 768px) {
     position: absolute;
     left: 50%;
     transform: translateX(-50%);
+
+    .mobile {
+      display: inline;
+    }
+
+    .desktop {
+      display: none;
+    }
   }
 `;
 
@@ -118,10 +134,10 @@ const NavMenuItem = styled(NavigationMenu.Item)`
 
 const NavMenuLink = styled(NavigationMenu.Link)`
   text-decoration: none;
-  color: #333;
+  color: #363636;
   font-weight: 500;
   &:hover {
-    color: #0070f3;
+    color: #cca43b;
   }
 `;
 
@@ -138,22 +154,26 @@ const BurgerIcon = styled.div`
   svg {
     width: 24px;
     height: 24px;
-    color: #333;
+    color: #363636;
   }
 `;
 
 const IconContainer = styled.div`
   display: flex;
+  justify-content: center;
+  align-items: center;
   gap: 1rem;
 `;
 
 const IconWrapper = styled.div`
   cursor: pointer;
-
+  display: flex;
+  justify-content: center;
+  align-items: center;
   svg {
     width: 24px;
     height: 24px;
-    color: #333;
+    color: #363636;
   }
 `;
 
