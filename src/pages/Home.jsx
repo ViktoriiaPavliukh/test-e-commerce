@@ -1,5 +1,6 @@
 import React from "react";
 import SearchPanel from "../components/SearchPanel";
+import ProductsList from "../components/ProductsList";
 import styled from "styled-components";
 
 const Home = () => {
@@ -14,7 +15,10 @@ const Home = () => {
         </h1>
         <p>Explore our unique products and find what makes you stand out</p>
       </TextContent>
-      <SearchPanel />
+      <ProductsWrapper>
+        <SearchPanel />
+        <ProductsList />
+      </ProductsWrapper>
     </HomeWrapper>
   );
 };
@@ -22,8 +26,22 @@ const Home = () => {
 const HomeWrapper = styled.main`
   display: flex;
   flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-align: center;
 `;
+
+const ProductsWrapper = styled.div`
+  display: flex;
+  max-width: 1440px;
+  padding: 1rem 2rem;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+`;
+
 const StyledDistinctive = styled.span`
   font-size: 2rem;
   font-weight: 900;

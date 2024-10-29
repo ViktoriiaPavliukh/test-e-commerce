@@ -27,12 +27,9 @@ const SearchSort = () => {
 
 const SearchSortWrapper = styled.div`
   display: flex;
-  padding: 1rem 2rem;
-  justify-item: left;
-  justify-self: left;
-  justify-content: left;
-  align-items: center;
+  max-width: 1440px;
   gap: 1rem;
+  width: 100%;
 `;
 
 const SearchWrapper = styled.div`
