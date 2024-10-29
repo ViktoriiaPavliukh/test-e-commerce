@@ -1,0 +1,303 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "category": "men",
+      "name": "Classic T-Shirt",
+      "description": "A timeless T-shirt made from 100% cotton.",
+      "images": [
+        "https://example.com/images/men/tshirt1-1.jpg",
+        "https://example.com/images/men/tshirt1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "White", "Navy"]
+      },
+      "price": 19.99
+    },
+    {
+      "id": "2",
+      "category": "men",
+      "name": "Denim Jeans",
+      "description": "Slim-fit denim jeans for a stylish look.",
+      "images": [
+        "https://example.com/images/men/jeans1-1.jpg",
+        "https://example.com/images/men/jeans1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["28", "30", "32", "34"],
+        "colors": ["Dark Blue", "Light Blue"]
+      },
+      "price": 49.99
+    },
+    {
+      "id": "3",
+      "category": "men",
+      "name": "Polo Shirt",
+      "description": "A classic polo shirt perfect for casual wear.",
+      "images": [
+        "https://example.com/images/men/polo1-1.jpg",
+        "https://example.com/images/men/polo1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Green", "Red", "Black"]
+      },
+      "price": 24.99
+    },
+    {
+      "id": "4",
+      "category": "men",
+      "name": "Leather Jacket",
+      "description": "Stylish leather jacket for cool weather.",
+      "images": [
+        "https://example.com/images/men/jacket1-1.jpg",
+        "https://example.com/images/men/jacket1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["M", "L", "XL"],
+        "colors": ["Black", "Brown"]
+      },
+      "price": 89.99
+    },
+    {
+      "id": "5",
+      "category": "men",
+      "name": "Running Shorts",
+      "description": "Comfortable shorts for running and exercise.",
+      "images": [
+        "https://example.com/images/men/shorts1-1.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Grey", "Black"]
+      },
+      "price": 15.99
+    },
+    {
+      "id": "6",
+      "category": "women",
+      "name": "Summer Dress",
+      "description": "Light and airy dress for warm weather.",
+      "images": [
+        "https://example.com/images/women/dress1-1.jpg",
+        "https://example.com/images/women/dress1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Red", "Blue", "Yellow"]
+      },
+      "price": 29.99
+    },
+    {
+      "id": "7",
+      "category": "women",
+      "name": "Knit Sweater",
+      "description": "Cozy knit sweater for chilly days.",
+      "images": [
+        "https://example.com/images/women/sweater1-1.jpg",
+        "https://example.com/images/women/sweater1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L"],
+        "colors": ["Beige", "Pink", "Grey"]
+      },
+      "price": 39.99
+    },
+    {
+      "id": "8",
+      "category": "women",
+      "name": "Skinny Jeans",
+      "description": "High-waist skinny jeans for a flattering fit.",
+      "images": [
+        "https://example.com/images/women/jeans1-1.jpg",
+        "https://example.com/images/women/jeans1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Black", "Blue"]
+      },
+      "price": 45.99
+    },
+    {
+      "id": "9",
+      "category": "women",
+      "name": "Blazer",
+      "description": "Sophisticated blazer for a professional look.",
+      "images": [
+        "https://example.com/images/women/blazer1-1.jpg",
+        "https://example.com/images/women/blazer1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "Grey"]
+      },
+      "price": 59.99
+    },
+    {
+      "id": "10",
+      "category": "women",
+      "name": "Workout Leggings",
+      "description": "High-quality leggings for workouts.",
+      "images": [
+        "https://example.com/images/women/leggings1-1.jpg",
+        "https://example.com/images/women/leggings1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L", "XL"],
+        "colors": ["Black", "Purple"]
+      },
+      "price": 25.99
+    },
+    {
+      "id": "11",
+      "category": "kids",
+      "name": "Graphic T-Shirt",
+      "description": "Fun graphic tee for kids.",
+      "images": [
+        "https://example.com/images/kids/tshirt1-1.jpg",
+        "https://example.com/images/kids/tshirt1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["XS", "S", "M"],
+        "colors": ["Yellow", "Blue"]
+      },
+      "price": 12.99
+    },
+    {
+      "id": "12",
+      "category": "kids",
+      "name": "Joggers",
+      "description": "Comfortable joggers for active kids.",
+      "images": [
+        "https://example.com/images/kids/joggers1-1.jpg",
+        "https://example.com/images/kids/joggers1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Grey", "Black"]
+      },
+      "price": 15.99
+    },
+    {
+      "id": "13",
+      "category": "kids",
+      "name": "Puffer Jacket",
+      "description": "Warm puffer jacket for winter.",
+      "images": [
+        "https://example.com/images/kids/jacket1-1.jpg",
+        "https://example.com/images/kids/jacket1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L"],
+        "colors": ["Red", "Blue"]
+      },
+      "price": 34.99
+    },
+    {
+      "id": "14",
+      "category": "kids",
+      "name": "Denim Overalls",
+      "description": "Classic denim overalls for kids.",
+      "images": [
+        "https://example.com/images/kids/overalls1-1.jpg",
+        "https://example.com/images/kids/overalls1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["XS", "S", "M"],
+        "colors": ["Blue"]
+      },
+      "price": 29.99
+    },
+    {
+      "id": "15",
+      "category": "kids",
+      "name": "Sweatshirt",
+      "description": "Soft sweatshirt with fun designs.",
+      "images": [
+        "https://example.com/images/kids/sweatshirt1-1.jpg",
+        "https://example.com/images/kids/sweatshirt1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["XS", "S", "M", "L"],
+        "colors": ["Pink", "Grey"]
+      },
+      "price": 18.99
+    },
+    {
+      "id": "16",
+      "category": "women",
+      "name": "Long Cardigan",
+      "description": "Elegant cardigan for layering.",
+      "images": [
+        "https://example.com/images/women/cardigan1-1.jpg",
+        "https://example.com/images/women/cardigan1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L"],
+        "colors": ["Beige", "Grey"]
+      },
+      "price": 42.99
+    },
+    {
+      "id": "17",
+      "category": "men",
+      "name": "Sports Jacket",
+      "description": "Lightweight jacket for sports.",
+      "images": [
+        "https://example.com/images/men/jacket2-1.jpg",
+        "https://example.com/images/men/jacket2-2.jpg"
+      ],
+      "options": {
+        "sizes": ["M", "L", "XL"],
+        "colors": ["Blue", "Black"]
+      },
+      "price": 54.99
+    },
+    {
+      "id": "18",
+      "category": "women",
+      "name": "Denim Skirt",
+      "description": "Stylish denim skirt for everyday wear.",
+      "images": [
+        "https://example.com/images/women/skirt1-1.jpg",
+        "https://example.com/images/women/skirt1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L"],
+        "colors": ["Blue"]
+      },
+      "price": 27.99
+    },
+    {
+      "id": "19",
+      "category": "men",
+      "name": "Chinos",
+      "description": "Casual chinos for versatile styling.",
+      "images": [
+        "https://example.com/images/men/chinos1-1.jpg",
+        "https://example.com/images/men/chinos1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["30", "32", "34", "36"],
+        "colors": ["Khaki", "Navy"]
+      },
+      "price": 35.99
+    },
+    {
+      "id": "20",
+      "category": "kids",
+      "name": "Raincoat",
+      "description": "Waterproof raincoat for rainy days.",
+      "images": [
+        "https://example.com/images/kids/raincoat1-1.jpg",
+        "https://example.com/images/kids/raincoat1-2.jpg"
+      ],
+      "options": {
+        "sizes": ["S", "M", "L"],
+        "colors": ["Yellow", "Blue"]
+      },
+      "price": 22.99
+    }
+  ]
+}
