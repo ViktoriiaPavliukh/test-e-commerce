@@ -7,7 +7,10 @@ const Home = () => {
   return (
     <HomeWrapper>
       <ImageWrapper>
-        <HeroImage src="src/assets/images/store.jpg" alt="Hero" />
+        <HeroImage
+          src="https://images.unsplash.com/photo-1462392246754-28dfa2df8e6b?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+          alt="Store"
+        />
       </ImageWrapper>
       <TextContent>
         <h1>
@@ -54,10 +57,11 @@ const ImageWrapper = styled.div`
   overflow: hidden;
   margin: 0;
   padding: 0;
+  margin-top: 60px;
 `;
 
 const HeroImage = styled.img`
-  width: 100%;
+  width: 100vw;
   height: auto;
   margin: 0;
 `;

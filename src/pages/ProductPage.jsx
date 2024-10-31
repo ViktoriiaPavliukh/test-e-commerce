@@ -96,14 +96,14 @@ const ProductPage = () => {
 
 const PageContainer = styled.div`
   width: 100%;
+  min-height: 87vh;
   margin: 0 auto;
   padding: 80px 0 0 0;
   max-width: 1440px;
   display: flex;
-  justify-content: center;
+  justify-content: start;
   flex-direction: column;
   align-items: center;
-
 
   @media (min-width: 768px) {
     flex-direction: row;
