@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import * as NavigationMenu from "@radix-ui/react-navigation-menu";
 import styled from "styled-components";
 import {
@@ -35,10 +36,12 @@ const Header = () => {
           </NavMenuItem>
         </NavMenuList>
       </NavMenuRoot>
-      <Logo>
-        <span className="mobile">d.</span>
-        <span className="desktop">distinctive.</span>
-      </Logo>
+      <Link to="/" style={{ textDecoration: "none", color: "inherit" }}>
+        <Logo>
+          <span className="mobile">d.</span>
+          <span className="desktop">distinctive.</span>
+        </Logo>
+      </Link>
       <IconContainer>
         <IconWrapper>
           <MagnifyingGlassIcon />
@@ -55,14 +58,16 @@ const Header = () => {
 };
 
 const HeaderWrapper = styled.header`
+  position: fixed;
+  width: 100%;
+  top: 0;
   background-color: #e5e5e5;
   padding: 1rem 2rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
+  z-index: 1000;
 
-  /* Layout for desktop view */
   @media (min-width: 768px) {
     justify-content: space-between;
   }
@@ -79,10 +84,8 @@ const NavMenuRoot = styled(NavigationMenu.Root)`
     left: 0;
     width: 50%;
     background-color: #e5e5e5;
-    // flex-direction: column;
     justify-content: flex-start;
     gap: 1rem;
-    // padding: 1rem;
     box-shadow: 0px 4px 12px rgba(0, 0, 0, 0.1);
   }
 `;
@@ -99,16 +102,12 @@ const Logo = styled.div`
   }
 
   .desktop {
-    display: inline;
+    display: flex;
   }
 
   @media (max-width: 768px) {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-
     .mobile {
-      display: inline;
+      display: flex;
     }
 
     .desktop {
@@ -121,7 +120,6 @@ const NavMenuList = styled(NavigationMenu.List)`
   display: flex;
   gap: 1.5rem;
 
-  /* Mobile view: stack vertically */
   @media (max-width: 768px) {
     flex-direction: column;
     gap: 1rem;
@@ -145,12 +143,10 @@ const BurgerIcon = styled.div`
   display: none;
   cursor: pointer;
 
-  /* Show burger icon only on mobile screens */
   @media (max-width: 768px) {
-    display: block;
+    display: flex;
   }
 
-  /* Set icon size */
   svg {
     width: 24px;
     height: 24px;
