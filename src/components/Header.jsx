@@ -108,6 +108,7 @@ const Logo = styled.div`
   @media (max-width: 768px) {
     .mobile {
       display: flex;
+      padding-left: 30px;
     }
 
     .desktop {

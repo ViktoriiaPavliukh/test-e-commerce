@@ -23,13 +23,14 @@ const IconButton = styled.button`
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: 16px;
+  border-radius: 50px;
   padding: 14px;
 `;
 
 const LikeButton = styled(IconButton)`
   background-color: #fff;
-  border: 1px solid #242f40;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  border: none;
   color: #242f40;
   svg {
     width: 24px;

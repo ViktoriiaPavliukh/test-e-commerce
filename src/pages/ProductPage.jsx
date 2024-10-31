@@ -49,33 +49,35 @@ const ProductPage = () => {
           {product.description}
           <PriceTag>Price: ${product.price}</PriceTag>
         </ProductDescription>
-        <OptionsContainer>
-          <OptionTitle>Select size:</OptionTitle>
-          <Options>
-            {product.options.sizes.map((size) => (
-              <OptionButton
-                key={size}
-                onClick={() => setSelectedSize(size)}
-                selected={selectedSize === size}
-              >
-                {size}
-              </OptionButton>
-            ))}
-          </Options>
-        </OptionsContainer>
-        <OptionsContainer>
-          <OptionTitle>Select color:</OptionTitle>
-          <Options>
-            {product.options.colors.map((color) => (
-              <OptionButton
-                key={color}
-                onClick={() => setSelectedColor(color)}
-                selected={selectedColor === color}
-                style={{ backgroundColor: color }}
-              />
-            ))}
-          </Options>
-        </OptionsContainer>
+        <SelectContainer>
+          <OptionsContainer>
+            <OptionTitle>Select size:</OptionTitle>
+            <Options>
+              {product.options.sizes.map((size) => (
+                <OptionButton
+                  key={size}
+                  onClick={() => setSelectedSize(size)}
+                  selected={selectedSize === size}
+                >
+                  {size}
+                </OptionButton>
+              ))}
+            </Options>
+          </OptionsContainer>
+          <OptionsContainer>
+            <OptionTitle>Select color:</OptionTitle>
+            <Options>
+              {product.options.colors.map((color) => (
+                <OptionButton
+                  key={color}
+                  onClick={() => setSelectedColor(color)}
+                  selected={selectedColor === color}
+                  style={{ backgroundColor: color }}
+                />
+              ))}
+            </Options>
+          </OptionsContainer>
+        </SelectContainer>
         <Tooltip.Root>
           <Tooltip.Trigger asChild>
             <AddToCartButton>
@@ -95,8 +97,10 @@ const ProductPage = () => {
 const PageContainer = styled.div`
   width: 100%;
   margin: 0 auto;
+  padding: 80px 0;
   max-width: 1440px;
   display: flex;
+  justify-content: center;
   flex-direction: column;
   align-items: center;
 
@@ -106,13 +110,13 @@ const PageContainer = styled.div`
     align-items: stretch;
     padding: 1rem 2rem;
     gap: 40px;
+    margin-top: 100px;
   }
 `;
 
 const MainImageContainer = styled.div`
   position: relative;
   width: 100%;
-  margin-bottom: 20px;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -223,10 +227,10 @@ const ProductDetails = styled.div`
   align-items: left;
   text-align: center;
   padding: 1rem 2rem;
-  
+
   @media (min-width: 768px) {
     padding: 0;
-    width: 50%;
+    width: 40%;
     height: 100%;
     text-align: left;
     justify-content: flex-start;
@@ -236,12 +240,23 @@ const ProductDetails = styled.div`
 
 const ProductName = styled.h1`
   font-size: 2rem;
- margin: 0;
+  margin: 0;
   font-weight: 400;
 `;
 
 const ProductDescription = styled.p`
   font-size: 1.1rem;
+  text-align: left;
+`;
+
+const SelectContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+
+  @media (min-width: 768px) {
+    flex-direction: row;
+    gap: 40px;
+  }
 `;
 
 const OptionsContainer = styled.div`
@@ -268,12 +283,12 @@ const OptionButton = styled.button`
   border: 1px solid #e5e5e5;
   cursor: pointer;
   background-color: ${({ selected }) => (selected ? "#cca43b" : "#e5e5e5")};
-  color: ${({ selected }) => (selected ? "#242f40" : "#333")};
+  color: #242f40;
   border-radius: 6px;
   min-width: 36px;
   min-height: 36px;
   border: ${({ selected }) =>
-    selected ? "1px solid #cca43b" : "1px solid transparent"};
+    selected ? "1px solid #cca43b" : "1px solid #e5e5e5"};
   &:hover {
     background-color: ${({ selected }) => (selected ? "#242f40" : "#e5e5e5")};
     color: ${({ selected }) => (selected ? "#fff" : "#242f40")};
@@ -289,7 +304,7 @@ const AddToCartButton = styled.button`
   background-color: #242f40;
   color: white;
   margin-top: 20px;
-  padding: 10px 20px;
+  padding: 16px 40px;
   border-radius: 8px;
   font-size: 1rem;
   cursor: pointer;
@@ -297,8 +312,7 @@ const AddToCartButton = styled.button`
   border: 1px solid #242f40;
 
   &:hover {
-    background-color: #cca43b;
-    color: #242f40;
+    color: #cca43b;
   }
 `;
 
@@ -309,13 +323,6 @@ const TooltipContent = styled(Tooltip.Content)`
   border-radius: 4px;
   font-size: 0.9rem;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-`;
-
-const ButtonWrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 40px;
 `;
 
 export default ProductPage;

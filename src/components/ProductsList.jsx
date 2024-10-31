@@ -11,7 +11,10 @@ const ProductsList = () => {
   return (
     <ProductGrid>
       {products.map((product) => (
-        <Link to={`/product/${product.id}`}>
+        <Link
+          to={`/product/${product.id}`}
+          style={{ textDecoration: "none", color: "inherit" }}
+        >
           <ProductCard key={product.id}>
             <AvatarRoot>
               <PriceTag>${product.price}</PriceTag>
@@ -53,7 +56,7 @@ const ProductGrid = styled.div`
   display: grid;
   width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  gap: 20px;
+  gap: 30px;
 `;
 
 const ProductCard = styled.div`
@@ -63,6 +66,10 @@ const ProductCard = styled.div`
   border-radius: 16px;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  &:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.8);
+  }
 `;
 
 const AvatarRoot = styled(Avatar.Root)`
@@ -70,7 +77,7 @@ const AvatarRoot = styled(Avatar.Root)`
   justify-content: center;
   align-items: center;
   margin-bottom: 10px;
-  position: relative; /* Required for absolute positioning of PriceTag */
+  position: relative;
 `;
 
 const AvatarImage = styled(Avatar.Image)`
@@ -81,10 +88,10 @@ const AvatarImage = styled(Avatar.Image)`
 
 const PriceTag = styled.div`
   position: absolute;
-  top: 10px;
-  left: 10px;
+  top: 20px;
+  left: 20px;
   background-color: white;
-  font-weight: bold;
+  font-weight: 400;
   font-size: 1rem;
   border-radius: 50%;
   padding: 14px;
