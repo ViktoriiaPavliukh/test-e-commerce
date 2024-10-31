@@ -57,6 +57,7 @@ const ProductGrid = styled.div`
   width: 100%;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 30px;
+  margin-bottom: 40px;
 `;
 
 const ProductCard = styled.div`
