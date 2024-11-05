@@ -1,16 +1,26 @@
-import React from "react";
-import { Link } from "react-router-dom";
+import React, { useState } from "react";
+import { FiShoppingCart } from "react-icons/fi";
+import * as Tabs from "@radix-ui/react-tabs";
 import * as Avatar from "@radix-ui/react-avatar";
 import * as Tooltip from "@radix-ui/react-tooltip";
 import { HeartIcon } from "@radix-ui/react-icons";
-import { FiShoppingCart } from "react-icons/fi";
-import products from "../data/products.json";
+import { Link, useParams } from "react-router-dom";
 import styled from "styled-components";
+import products from "../data/products.json";
 
-const ProductsList = () => {
+const ProductFilter = () => {
+  const { category } = useParams();
+  const filteredProducts = products.filter(
+    (item) => item.category === category
+  );
+
+  if (!filteredProducts.length) {
+    return <div>`No products found in the ${category} category.`</div>;
+  }
+
   return (
     <ProductGrid>
-      {products.map((product) => (
+      {filteredProducts.map((product) => (
         <Link
           to={`/product/${product.id}`}
           key={product.id}
@@ -158,4 +168,4 @@ const TooltipContent = styled(Tooltip.Content)`
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
 `;
 
-export default ProductsList;
+export default ProductFilter;

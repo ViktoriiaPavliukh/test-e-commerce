@@ -26,13 +26,19 @@ const Header = () => {
       <NavMenuRoot open={menuOpen}>
         <NavMenuList>
           <NavMenuItem>
-            <NavMenuLink href="/men">Men</NavMenuLink>
+            <NavMenuLink as={Link} to="products/men">
+              Men
+            </NavMenuLink>
           </NavMenuItem>
           <NavMenuItem>
-            <NavMenuLink href="/women">Women</NavMenuLink>
+            <NavMenuLink as={Link} to="products/women">
+              Women
+            </NavMenuLink>
           </NavMenuItem>
           <NavMenuItem>
-            <NavMenuLink href="/kids">Kids</NavMenuLink>
+            <NavMenuLink as={Link} to="products/kids">
+              Kids
+            </NavMenuLink>
           </NavMenuItem>
         </NavMenuList>
       </NavMenuRoot>
